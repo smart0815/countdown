@@ -1,0 +1,88 @@
+.container {
+  background: rgba(255, 255, 255, 0.02);
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  bottom: 80px;
+  right: 100px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  backdrop-filter: blur(8px);
+}
+
+span {
+  font-size: 3vw;
+  font-weight: 400;
+  font-family: 'Caveat', cursive;
+}
+
+.coming-text {
+  font-size: 60px;
+  font-weight: 700;
+  color: white;
+}
+
+.Countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #252525;
+  margin-top: 40px;
+}
+
+.countdown-col {
+  width: 10vw;
+  height: 10vw;
+  margin-right: 3vw;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 5vw;
+  padding-bottom: 2vw;
+}
+
+.countdown-col::after {
+  content: 'Days';
+  width: 100%;
+  background-color: #f4c150;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: .5vw 0;
+  font-size: 1.2vw;
+}
+
+.countdown-col:nth-child(2)::after {
+  content: 'Hours';
+}
+
+.countdown-col:nth-child(3)::after {
+  content: 'Minutes';
+}
+
+.countdown-col:nth-child(4)::after {
+  content: 'Seconds';
+}
+
+@media all and (max-width: 760px) {
+  .coming-text {
+    font-size: 30px;
+  }
+
+  .container {
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+}
